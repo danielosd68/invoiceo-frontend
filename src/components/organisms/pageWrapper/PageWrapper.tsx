@@ -1,12 +1,19 @@
-import React, {ReactNode} from 'react';
+"use client"
 
-const PageWrapper = ({children}: {children: ReactNode}) => {
+import React, {ReactNode} from 'react';
+import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
+import {LocalizationProvider} from "@mui/x-date-pickers";
+
+const PageWrapper = ({children}: { children: ReactNode }) => {
     return (
-        <div className={'flex flex-col items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'}>
-            <main className={'w-full lg:w-[1024px]'}>
-                {children}
-            </main>
-        </div>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <div className={'flex flex-col items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'}>
+                <main className={'w-full lg:w-[1024px]'}>
+                    {children}
+                </main>
+            </div>
+        </LocalizationProvider>
+
     );
 };
 
