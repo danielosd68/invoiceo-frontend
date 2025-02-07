@@ -2,12 +2,10 @@ import React from 'react';
 import Link from "next/link";
 import {Card, CardContent} from "@mui/material";
 import Footer from "invoiceo/components/organisms/footer/Footer";
-import Header from "invoiceo/components/organisms/header/Header";
 
 const IndexTemplate = () => {
     return (
-        <div>
-            <Header/>
+        <div className={'mt-5'}>
             <section>
                 <Link href={'/create'}>
                     <Card>

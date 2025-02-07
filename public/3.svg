@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="700"
+   height="300"
+   viewBox="0 0 185.20833 79.374999"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.0267829"
+     inkscape:cx="333.07916"
+     inkscape:cy="302.40082"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="201"
+     inkscape:window-y="1072"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3"
+     showguides="true" />
+  <defs
+     id="defs1">
+    <rect
+       x="37.187771"
+       y="495.83691"
+       width="628.06012"
+       height="165.27898"
+       id="rect3" />
+    <rect
+       x="223.12662"
+       y="276.84229"
+       width="398.04688"
+       height="147.37375"
+       id="rect2" />
+    <rect
+       x="194.20279"
+       y="314.03006"
+       width="381.51895"
+       height="232.76788"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32px;font-family:Nunito;-inkscape-font-specification:'Nunito Light';text-align:center;letter-spacing:5px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.66079;stroke-linecap:square" />
+    <g
+       id="g3"
+       transform="translate(-1.930421)">
+      <g
+         id="g4"
+         style="stroke-width:1.00012;stroke-dasharray:none"
+         transform="matrix(1.0668073,0,0,1.0668073,-9.0140198,-69.142864)">
+        <path
+           d="m 17.985665,73.642035 h 61.67394 v 11.510834 h 7.70897 V 64.901275 H 10.275632 V 139.11783 H 52.677124 V 131.4078 H 17.985665 Z"
+           fill="#0f1f3c"
+           id="path1"
+           style="fill:#0f1f3c;fill-opacity:1;stroke:none;stroke-width:1.00012;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:nodetypes="ccccccccccc" />
+        <text
+           xml:space="preserve"
+           transform="matrix(0.26458333,0,0,0.26458333,8.5157183,-41.605734)"
+           id="text3"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:120px;font-family:Nunito;-inkscape-font-specification:'Nunito Light';text-align:center;letter-spacing:5px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#5d75a2;fill-opacity:1;stroke:#5d75a2;stroke-width:3.78;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"><tspan
+             x="49.162491"
+             y="599.78022"
+             id="tspan2"><tspan
+               style="font-weight:500;-inkscape-font-specification:'Nunito Medium'"
+               id="tspan1">INVOICEO</tspan></tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
