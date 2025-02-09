@@ -1,11 +1,12 @@
 import React from 'react';
-import {Button, Divider} from "@mui/material";
+import {Button, Divider, LinearProgress} from "@mui/material";
 import InvoiceCreator from "invoiceo/components/organisms/invoiceCreator/InvoiceCreator";
 
 const InvoiceCreatorTemplate = () => {
     return (
         <div>
-            <h1>Wystaw fakturę</h1>
+            <LinearProgress variant="determinate" value={50} sx={{position: 'fixed', zIndex: 10, top: 0, left: 0, width: '100%'}}/>
+            <h1 className={'mt-0'}>Wystaw fakturę</h1>
             <p className={'text-gray-400'}>Uzupełnij potrzebne dane, dodaj towar / usługę, określ stawkę VAT i wyślij do klienta.</p>
             {InvoiceCreator.getForm("nips")}
             <Divider/>

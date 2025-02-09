@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from "next/link";
 import {Card, CardContent} from "@mui/material";
-import Footer from "invoiceo/components/organisms/footer/Footer";
 
 const IndexTemplate = () => {
     return (
@@ -16,7 +15,6 @@ const IndexTemplate = () => {
                     </Card>
                 </Link>
             </section>
-            <Footer/>
         </div>
     );
 };
