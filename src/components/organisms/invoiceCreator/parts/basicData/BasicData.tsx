@@ -16,7 +16,7 @@ const BasicData = () => {
     return (
         <>
             <form>
-                <div className={'grid grid-cols-2 gap-5 mt-5 mb-5'}>
+                <div className={'grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5 mb-5'}>
                     <div>
                         <DateField sx={{width: '100%'}} label={'Data wystawienia'} id={'invoiceDate'} name={'invoiceDate'} onChange={formik.handleChange}/>
                     </div>

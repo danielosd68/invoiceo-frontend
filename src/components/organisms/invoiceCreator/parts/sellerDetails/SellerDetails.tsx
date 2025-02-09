@@ -27,10 +27,10 @@ const SellerDetails = () => {
                     <div className={'col-span-2'}>
                         <TextField sx={{width: '100%'}} label={'Adres'} id={'address'} name={'address'} type={'text'} value={formik.values.address} onChange={formik.handleChange}/>
                     </div>
-                    <div className={''}>
+                    <div className={'col-span-2 lg:col-span-1'}>
                         <TextField sx={{width: '100%'}} label={'Numer NIP'} id={'nip'} name={'nip'} type={'text'} value={formik.values.nip} onChange={formik.handleChange}/>
                     </div>
-                    <div className={''}>
+                    <div className={'col-span-2 lg:col-span-1'}>
                         <TextField sx={{width: '100%'}} label={'Numer telefonu'} id={'phone'} name={'phone'} type={'text'} value={formik.values.phone} onChange={formik.handleChange}/>
                     </div>
                     <div className={'col-span-2'}>

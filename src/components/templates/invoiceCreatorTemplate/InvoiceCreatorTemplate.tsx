@@ -8,15 +8,12 @@ const InvoiceCreatorTemplate = () => {
         {
             label: "Pobierz dane z rejestru CEIDG",
             content: (<>
-                <h1 className={'mt-0'}>Wystaw fakturę</h1>
-                <p className={'text-gray-400'}>Uzupełnij potrzebne dane, dodaj towar / usługę, określ stawkę VAT i wyślij do klienta.</p>
                 {InvoiceCreator.getForm("nips")}
             </>)
         },
         {
             label: "Podstawowe dane faktury",
             content: (<>
-                <h2>Podstawowe dane faktury</h2>
                 <p className={'text-gray-400'}>Dodaj logo, datę wystawienia i numer faktury.</p>
                 {InvoiceCreator.getForm("basic")}
             </>)
@@ -24,7 +21,6 @@ const InvoiceCreatorTemplate = () => {
         {
             label: "Dane sprzedawcy",
             content: (<>
-                <h2>Dane sprzedawcy</h2>
                 {InvoiceCreator.getForm("sellerDetails")}
             </>)
         }
@@ -32,7 +28,6 @@ const InvoiceCreatorTemplate = () => {
         {
             label: "Dane nabywcy",
             content: (<>
-                <h2>Dane nabywcy</h2>
                 {InvoiceCreator.getForm("customerDetails")}
             </>)
         },
@@ -46,7 +41,6 @@ const InvoiceCreatorTemplate = () => {
         {
             label: "Uwagi",
             content: (<>
-                <h2>Uwagi</h2>
                 {InvoiceCreator.getForm("comments")}
             </>)
         }
@@ -73,13 +67,15 @@ const InvoiceCreatorTemplate = () => {
     };
     return (
         <div>
+            <h1 className={'mt-0'}>Wystaw fakturę</h1>
+            <p className={'text-gray-400'}>Uzupełnij potrzebne dane, dodaj towar / usługę, określ stawkę VAT i wyślij do klienta.</p>
             <Stepper activeStep={activeStep} orientation={"vertical"}>
                 {steps.map((step, index) => (
                     <Step key={step.label}>
                         <StepLabel
                             optional={
                                 index === steps.length - 1 ? (
-                                    <Typography variant="caption">Last step</Typography>
+                                    <Typography variant="caption">Ostatni krok</Typography>
                                 ) : null
                             }
                         >
