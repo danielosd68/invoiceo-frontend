@@ -1,27 +1,20 @@
-import {useFormik} from "formik";
 import {TextField} from "@mui/material";
-import {DateField} from "@mui/x-date-pickers";
-import {Dayjs} from "dayjs";
+import {DatePicker} from "@mui/x-date-pickers";
+import {FormikProps} from "formik";
+import {IInvoiceFormModel} from "invoiceo/components/templates/invoiceCreatorTemplate/InvoiceCreatorTemplate";
+import dayjs from "dayjs";
 
-const BasicData = () => {
-    const formik = useFormik({
-        initialValues: {
-            invoiceDate: Dayjs,
-            id: 1
-        },
-        onSubmit: (values) => {
-            console.log(values);
-        }
-    });
+
+const BasicData = (props: {invoiceForm: FormikProps<IInvoiceFormModel>}) => {
     return (
         <>
             <form>
                 <div className={'grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5 mb-5'}>
                     <div>
-                        <DateField sx={{width: '100%'}} label={'Data wystawienia'} id={'invoiceDate'} name={'invoiceDate'} onChange={formik.handleChange}/>
+                        <DatePicker sx={{width: '100%'}} label={'Data wystawienia'} name={'createdAt'} value={dayjs(props.invoiceForm.values.createdAt)} onChange={(value) => {console.log(value?.date())}}/>
                     </div>
                     <div>
-                        <TextField sx={{width: '100%'}} label={'Numer faktury'} id={'id'} name={'id'} type={'number'} value={formik.values.invoiceDate} onChange={formik.handleChange}/>
+                        <TextField sx={{width: '100%'}} label={'Numer faktury'} id={'invoiceId'} name={'invoiceId'} type={'number'} value={props.invoiceForm.values.invoiceId} onChange={props.invoiceForm.handleChange}/>
                     </div>
                 </div>
             </form>

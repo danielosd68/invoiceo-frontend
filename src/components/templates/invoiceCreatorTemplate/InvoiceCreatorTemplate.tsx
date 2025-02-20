@@ -1,34 +1,47 @@
 import React, {useState} from 'react';
 import {Button, Step, StepContent, StepLabel, Stepper, Typography} from "@mui/material";
 import InvoiceCreator from "invoiceo/components/organisms/invoiceCreator/InvoiceCreator";
+import {FormikProps, useFormik} from "formik";
+
+export interface IInvoiceFormModel{
+    createdAt: string,
+    invoiceId: number
+}
 
 const InvoiceCreatorTemplate = () => {
-    const [activeStep, setActiveStep] = useState(0); //1 - nips; 2 - invoice details; 3 - seller details; 4 - customer details; 5 - towar; 6 - comments
+    const [activeStep, setActiveStep] = useState(0);
+    const invoiceForm: FormikProps<IInvoiceFormModel> = useFormik({
+        initialValues: {
+            createdAt: "",
+            invoiceId: 1
+        },
+        onSubmit: (values) => {console.table(values)}
+    });
     const steps = [
         {
             label: "Pobierz dane z rejestru CEIDG",
             content: (<>
-                {InvoiceCreator.getForm("nips")}
+                {InvoiceCreator.getForm("nips", invoiceForm)}
             </>)
         },
         {
             label: "Podstawowe dane faktury",
             content: (<>
                 <p className={'text-gray-400'}>Dodaj logo, datę wystawienia i numer faktury.</p>
-                {InvoiceCreator.getForm("basic")}
+                {InvoiceCreator.getForm("basic", invoiceForm)}
             </>)
         },
         {
             label: "Dane sprzedawcy",
             content: (<>
-                {InvoiceCreator.getForm("sellerDetails")}
+                {InvoiceCreator.getForm("sellerDetails", invoiceForm)}
             </>)
         }
         ,
         {
             label: "Dane nabywcy",
             content: (<>
-                {InvoiceCreator.getForm("customerDetails")}
+                {InvoiceCreator.getForm("customerDetails", invoiceForm)}
             </>)
         },
         {
@@ -41,7 +54,7 @@ const InvoiceCreatorTemplate = () => {
         {
             label: "Uwagi",
             content: (<>
-                {InvoiceCreator.getForm("comments")}
+                {InvoiceCreator.getForm("comments", invoiceForm)}
             </>)
         }
         ,
@@ -57,6 +70,7 @@ const InvoiceCreatorTemplate = () => {
             return;
         }
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        invoiceForm.handleSubmit();
     };
 
     const handleBack = () => {
@@ -83,16 +97,17 @@ const InvoiceCreatorTemplate = () => {
                         </StepLabel>
                         <StepContent>
                             {step.content}
+                            <div className={'mt-5 flex justify-between'}>
+                                <Button variant={'contained'} sx={{backgroundColor: '#000000'}} onClick={handleBack} disabled={activeStep === 0}>Cofnij</Button>
+                                <Button variant={'contained'} sx={{backgroundColor: '#000000'}} onClick={handleNext} disabled={activeStep === steps.length - 1}>Dalej</Button>
+                            </div>
                         </StepContent>
                     </Step>
                 ))}
             </Stepper>
 
 
-            <div className={'mt-5 flex justify-between'}>
-                <Button variant={'contained'} sx={{backgroundColor: '#000000'}} onClick={handleBack} disabled={activeStep === 0}>Cofnij</Button>
-                <Button variant={'contained'} sx={{backgroundColor: '#000000'}} onClick={handleNext} disabled={activeStep === steps.length - 1}>Dalej</Button>
-            </div>
+
         </div>
     );
 };
