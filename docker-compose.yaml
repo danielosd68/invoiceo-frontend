@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: 'app'
+    depends_on:
+      - db
+    networks:
+      - invoiceo-network
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./:/app/."
+  db:
+    image: mysql:8.0
+    container_name: 'app_db'
+    restart: always
+    env_file:
+      - ".env"
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+
+
+networks:
+  invoiceo-network:
+
+volumes:
+  db_data:
