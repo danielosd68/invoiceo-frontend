@@ -1,8 +1,9 @@
 import "./globals.css";
-import {CssBaseline, ThemeProvider} from "@mui/material";
+import {CssBaseline, LinearProgress, ThemeProvider} from "@mui/material";
 import {Metadata} from "next";
 import {AppRouterCacheProvider} from "@mui/material-nextjs/v13-appRouter";
 import theme from "invoiceo/theme";
+import React from "react";
 
 
 export const metadata: Metadata = {

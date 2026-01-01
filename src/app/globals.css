@@ -8,3 +8,7 @@
 a{
     text-decoration: none !important;
 }
+
+.MuiLinearProgress-root{
+    background: transparent !important;
+}
